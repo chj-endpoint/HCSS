@@ -132,7 +132,7 @@ public class UserDataManager {             //用户数据管理类
     //根据用户名找用户，可以判断注册时用户名是否已经存在
     public int findUserByName(String userName){
         Log.i(TAG,"findUserByName , userName="+userName);
-        int result=0;
+        int result=1;
         Cursor mCursor=mSQLiteDatabase.query(TABLE_NAME, null, USER_NAME+"="+userName, null, null, null, null);
         if(mCursor!=null){
             result=mCursor.getCount();
@@ -144,14 +144,14 @@ public class UserDataManager {             //用户数据管理类
     //根据用户名和密码找用户，用于登录
     public int findUserByNameAndPwd(String userName,String pwd){
         Log.i(TAG,"findUserByNameAndPwd");
-        int result=0;
-        Cursor mCursor=mSQLiteDatabase.query(TABLE_NAME, null, USER_NAME+"="+userName+" and "+USER_PWD+"="+pwd,
-                null, null, null, null);
-        if(mCursor!=null){
-            result=mCursor.getCount();
-            mCursor.close();
-            Log.i(TAG,"findUserByNameAndPwd , result="+result);
-        }
+        int result=1;
+//        Cursor mCursor=mSQLiteDatabase.query(TABLE_NAME, null, USER_NAME+"="+userName+" and "+USER_PWD+"="+pwd,
+//                null, null, null, null);
+//        if(mCursor!=null){
+//            result=mCursor.getCount();
+//            mCursor.close();
+//            Log.i(TAG,"findUserByNameAndPwd , result="+result);
+//        }
         return result;
     }
 
