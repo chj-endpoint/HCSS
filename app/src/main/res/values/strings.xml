@@ -1,7 +1,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">>
     <string name="hint_operator_name">你好</string>
     <string name="hello">Hello World, Date!</string>
-    <string name="app_name">HCSS</string>
+    <string name="app_name">启福HCSS系统</string>
     <string name="strInputAccHint">输入帐号</string>
     <string name="strAccInputLabel">帐号</string>
     <string name="strPswInputLabel">密码</string>
