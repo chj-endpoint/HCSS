@@ -46,5 +46,10 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     public int getItemCount() {
         return mData == null ? 0 : mData.size();
     }
+
+    public void setData(ArrayList<T> data){
+        mData = data;
+        notifyDataSetChanged();
+    }
 }
 

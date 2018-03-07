@@ -15,24 +15,23 @@ public class User extends AppCompatActivity {
     private Button mReturnButton;
     private RecyclerView mListRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
-    private RecyclerView.Adapter mRecyclerAdapter;
+    private AdapterHelper mRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user);
-        mReturnButton = (Button)findViewById(R.id.returnback);
+        initAdapter();
+        initView();
     }
-    public void back_to_login(View view) {
-        //setContentView(R.layout.login);
-        Intent intent3 = new Intent(User.this,Login.class) ;
-        startActivity(intent3);
-        finish();
+    public void queryClick(View view) {
+        //查询按钮按下
+        mRecyclerAdapter.setData(queryData());
     }
 
-    private void initData() {
+    private void initAdapter() {
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerAdapter = new AdapterHelper<UserData>(this, R.layout.list_item, queryData()){
+        mRecyclerAdapter = new AdapterHelper<UserData>(this, R.layout.list_item, null){
 
             @Override
             public void bindView(RViewHolder holder, UserData data) {
