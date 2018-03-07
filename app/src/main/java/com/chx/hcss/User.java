@@ -32,7 +32,13 @@ public class User extends AppCompatActivity {
 
     private void initData() {
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerAdapter = new AdapterHelper(queryData());
+        mRecyclerAdapter = new AdapterHelper<UserData>(this, R.layout.list_item, queryData()){
+
+            @Override
+            public void bindView(RViewHolder holder, UserData data) {
+                holder.setTextView(R.id.list_elder, data.getUserName());
+            }
+        };
     }
 
     private void initView() {
@@ -42,8 +48,12 @@ public class User extends AppCompatActivity {
         // 设置adapter
         mListRecyclerView.setAdapter(mRecyclerAdapter);
     }
-    private ArrayList<String> queryData(){
-
-        return null;
+    private ArrayList<UserData> queryData(){
+        ArrayList<UserData> itemList = new ArrayList<UserData>();
+        for (int i = 0; i < 20; i++) {
+            UserData item = new UserData("我的名字" + i, "abc");
+            itemList.add(item);
+        }
+        return itemList;
     }
 }
