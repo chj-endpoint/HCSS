@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class User extends AppCompatActivity {
     private Button mReturnButton;
     private RecyclerView mListRecyclerView;
-    private RecyclerView.LayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManager;
     private AdapterHelper mRecyclerAdapter;
 
     @Override
@@ -26,12 +26,12 @@ public class User extends AppCompatActivity {
     }
     public void queryClick(View view) {
         //查询按钮按下
-        mRecyclerAdapter.setData(queryData());
+        mRecyclerAdapter.setData(queryData(0));
     }
 
     private void initAdapter() {
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        mRecyclerAdapter = new AdapterHelper<UserData>(this, R.layout.list_item, null){
+        mRecyclerAdapter = new AdapterHelper<UserData>(this, R.layout.list_item){
 
             @Override
             public void bindView(RViewHolder holder, UserData data) {
@@ -46,11 +46,28 @@ public class User extends AppCompatActivity {
         mListRecyclerView.setLayoutManager(mLayoutManager);
         // 设置adapter
         mListRecyclerView.setAdapter(mRecyclerAdapter);
+        // 设置上滑加载更多监控
+        mListRecyclerView.addOnScrollListener(new RUpScrollListener(mLayoutManager) {
+
+            @Override
+            public void onLoadMore(int nextPageIndex) {
+                ArrayList<UserData> itemList = queryData(nextPageIndex);
+                if (itemList.isEmpty()) {
+                    setIsLoadComplete(true);
+                } else {
+                    mRecyclerAdapter.addData(itemList);
+                }
+            }
+        });
+
     }
-    private ArrayList<UserData> queryData(){
+    private ArrayList<UserData> queryData(int pageIndex){
         ArrayList<UserData> itemList = new ArrayList<UserData>();
+        if (pageIndex > 3) {
+            return itemList;
+        }
         for (int i = 0; i < 20; i++) {
-            UserData item = new UserData("我的名字" + i, "abc");
+            UserData item = new UserData("我的名字" + (20 * pageIndex + i), "abc");
             itemList.add(item);
         }
         return itemList;

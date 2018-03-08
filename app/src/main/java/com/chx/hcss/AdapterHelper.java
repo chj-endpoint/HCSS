@@ -21,8 +21,7 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     private int mLayoutId;
     private Context mContext;
 
-    public AdapterHelper(Context context, int layoutId, ArrayList<T> data) {
-        mData = data;
+    public AdapterHelper(Context context, int layoutId) {
         mLayoutId = layoutId;
         mContext = context;
     }
@@ -49,6 +48,11 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
 
     public void setData(ArrayList<T> data){
         mData = data;
+        notifyDataSetChanged();
+    }
+
+    public void addData(ArrayList<T> data){
+        mData.addAll(data);
         notifyDataSetChanged();
     }
 }
