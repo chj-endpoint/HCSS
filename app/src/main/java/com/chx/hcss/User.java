@@ -26,6 +26,20 @@ public class User extends AppCompatActivity {
     }
     public void queryClick(View view) {
         //查询按钮按下
+        mListRecyclerView.clearOnScrollListeners();
+        // 设置上滑加载更多监控
+        mListRecyclerView.addOnScrollListener(new RUpScrollListener(mLayoutManager) {
+
+            @Override
+            public void onLoadMore(int nextPageIndex) {
+                ArrayList<UserData> itemList = queryData(nextPageIndex);
+                if (itemList.isEmpty()) {
+                    setIsLoadComplete(true);
+                } else {
+                    mRecyclerAdapter.addData(itemList);
+                }
+            }
+        });
         mRecyclerAdapter.setData(queryData(0));
     }
 
@@ -46,20 +60,6 @@ public class User extends AppCompatActivity {
         mListRecyclerView.setLayoutManager(mLayoutManager);
         // 设置adapter
         mListRecyclerView.setAdapter(mRecyclerAdapter);
-        // 设置上滑加载更多监控
-        mListRecyclerView.addOnScrollListener(new RUpScrollListener(mLayoutManager) {
-
-            @Override
-            public void onLoadMore(int nextPageIndex) {
-                ArrayList<UserData> itemList = queryData(nextPageIndex);
-                if (itemList.isEmpty()) {
-                    setIsLoadComplete(true);
-                } else {
-                    mRecyclerAdapter.addData(itemList);
-                }
-            }
-        });
-
     }
     private ArrayList<UserData> queryData(int pageIndex){
         ArrayList<UserData> itemList = new ArrayList<UserData>();

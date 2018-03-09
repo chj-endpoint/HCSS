@@ -44,6 +44,10 @@ public abstract class RUpScrollListener extends RecyclerView.OnScrollListener {
         mIsLoadComplete = isLoadComplete;
     }
 
+    public void setCurrentPageIndex(int currentPageIndex){
+        mCurrentPageIndex = currentPageIndex;
+    }
+
     public abstract void onLoadMore(int nextPageIndex);
 
 }
