@@ -1,6 +1,7 @@
 package com.chx.hcss;
 
 import android.content.Intent;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +17,7 @@ public class User extends AppCompatActivity {
     private RecyclerView mListRecyclerView;
     private LinearLayoutManager mLayoutManager;
     private AdapterHelper mRecyclerAdapter;
+    private NestedScrollView mNestedScrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class User extends AppCompatActivity {
         initView();
     }
     public void queryClick(View view) {
+                
         //查询按钮按下
         mListRecyclerView.clearOnScrollListeners();
         // 设置上滑加载更多监控
@@ -55,6 +58,7 @@ public class User extends AppCompatActivity {
     }
 
     private void initView() {
+        mNestedScrollView = (NestedScrollView) findViewById(R.id.scroll_list_view);
         mListRecyclerView = (RecyclerView) findViewById(R.id.list_view);
         // 设置布局管理器
         mListRecyclerView.setLayoutManager(mLayoutManager);

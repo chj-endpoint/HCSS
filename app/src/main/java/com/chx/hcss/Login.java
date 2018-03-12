@@ -90,11 +90,16 @@ public class Login extends Activity {                 //登录界面活动
                 case R.id.login_btn_cancle:                             //登录界面的注销按钮
                     cancel();
                     break;
-                case R.id.login_text_change_pwd:                             //登录界面的注销按钮
-                    Intent intent_Login_to_reset = new Intent(Login.this,Resetpwd.class) ;    //切换Login Activity至User Activity
-                    startActivity(intent_Login_to_reset);
+                case R.id.login_text_change_pwd:                             //登录界面的修改密码按钮
+
+                    Intent intent_reset = new Intent(Login.this,TestActivity.class) ;    //切换Login Activity至User Activity
+                    startActivity(intent_reset);
                     finish();
                     break;
+//                    Intent intent_Login_to_reset = new Intent(Login.this,Resetpwd.class) ;    //切换Login Activity至User Activity
+//                    startActivity(intent_Login_to_reset);
+//                    finish();
+//                    break;
             }
         }
     };

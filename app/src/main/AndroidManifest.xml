@@ -15,12 +15,23 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:label="老人信息" android:name=".User"/>
-        <activity android:label="用户注册" android:name=".Register"/>
-        <activity android:label="密码修改" android:name=".Resetpwd"/>
+        <activity
+            android:name=".User"
+            android:label="老人信息" />
+        <activity
+            android:name=".Register"
+            android:label="用户注册" />
+        <activity
+            android:name=".Resetpwd"
+            android:label="密码修改" />
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
