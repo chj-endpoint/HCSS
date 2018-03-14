@@ -27,7 +27,6 @@ public class User extends AppCompatActivity {
         initView();
     }
     public void queryClick(View view) {
-                
         //查询按钮按下
         mListRecyclerView.clearOnScrollListeners();
         // 设置上滑加载更多监控

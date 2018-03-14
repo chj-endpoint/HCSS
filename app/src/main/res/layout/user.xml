@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin">
 
-    <android.support.v4.widget.NestedScrollView
+    <com.chx.hcss.MyNestedScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -130,6 +130,6 @@
             </android.support.v7.widget.RecyclerView>
         </LinearLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </com.chx.hcss.MyNestedScrollView>
 
 </RelativeLayout>

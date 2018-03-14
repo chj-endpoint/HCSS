@@ -109,6 +109,6 @@ public class MyNestedScrollChild extends ScrollView implements NestedScrollingCh
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        setMeasuredDimension(getMeasuredWidth(),getMeasuredHeight()+((MyNestedScrollParent)getParent()).getTopViewHeight());
+//        setMeasuredDimension(getMeasuredWidth(),getMeasuredHeight()+((MyNestedScrollParent)getParent()).getTopViewHeight());
     }
 }
