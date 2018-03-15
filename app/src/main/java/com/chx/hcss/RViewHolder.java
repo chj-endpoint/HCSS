@@ -12,8 +12,10 @@ import android.widget.TextView;
 public class RViewHolder extends RecyclerView.ViewHolder {
     private View mConvertView;
     private SparseArray mViews;
+    private int mViewType = -1;
     public RViewHolder(View itemView) {
         super(itemView);
+        int viewType = getItemViewType();
         mConvertView = itemView;
         mViews = new SparseArray<View>();
     }

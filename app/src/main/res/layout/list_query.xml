@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/query_view">
+
+    <TextView
+        android:id="@+id/street"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="街道："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spiStreet"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/street"
+        android:entries="@array/street" />
+
+    <TextView
+        android:id="@+id/community"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_below="@+id/street"
+        android:height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="社区："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spiCommunity"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spiStreet"
+        android:layout_toRightOf="@+id/community"
+        android:entries="@array/street"/>
+
+    <TextView
+        android:id="@+id/village"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_below="@+id/community"
+        android:height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="小区："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spiVillage"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spiCommunity"
+        android:layout_toRightOf="@+id/street"
+        android:entries="@array/street"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="false"
+        android:layout_below="@+id/village"
+        android:height="50dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="姓名："
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spiVillage"
+        android:layout_toRightOf="@+id/name"/>
+
+    <Button
+        android:id="@+id/query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:onClick="queryClick"
+        android:text="查询"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+</RelativeLayout>

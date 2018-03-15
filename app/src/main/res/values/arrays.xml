@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="street">
+        <item>海滨</item>
+        <item>白城</item>
+        <item>演武</item>
+    </string-array>
+</resources>

@@ -20,6 +20,12 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     private ArrayList<T> mData;
     private int mLayoutId;
     private Context mContext;
+    private static final int EMPTY_VIEW = 0;
+    private static final int QUERY_VIEW = 1;
+    private static final int REFUSH_VIEW = 2;
+    private static final int LOADMORE_VIEW = 3;
+    private static final int ITEM_VIEW = 4;
+
 
     public AdapterHelper(Context context, int layoutId) {
         mLayoutId = layoutId;
@@ -27,9 +33,32 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     }
 
     @Override
+    public int getItemViewType(int position) {
+        if(mData.size() == 0){
+            return EMPTY_VIEW;
+        }
+        if(position == 0){
+            return QUERY_VIEW;
+        } else {
+            return ITEM_VIEW;
+        }
+    }
+
+    @Override
     public RViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // 实例化viewholder
-        RViewHolder viewHolder = RViewHolder.getHolder(mContext, parent, mLayoutId);
+        RViewHolder viewHolder;
+        switch (viewType) {
+            case QUERY_VIEW:
+                viewHolder = RViewHolder.getHolder(mContext, parent, R.layout.list_query);
+                break;
+            case ITEM_VIEW:
+                viewHolder = RViewHolder.getHolder(mContext, parent, R.layout.list_item);
+                break;
+            default:
+                viewHolder = RViewHolder.getHolder(mContext, parent, mLayoutId);
+                break;
+        }
         return viewHolder;
     }
 
