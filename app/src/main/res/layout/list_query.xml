@@ -20,8 +20,7 @@
         android:id="@+id/spiStreet"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_toRightOf="@+id/street"
-        android:entries="@array/street" />
+        android:layout_toRightOf="@+id/street" />
 
     <TextView
         android:id="@+id/community"
@@ -42,8 +41,7 @@
         android:layout_marginTop="5dp"
         android:layout_height="50dp"
         android:layout_below="@+id/spiStreet"
-        android:layout_toRightOf="@+id/community"
-        android:entries="@array/street"/>
+        android:layout_toRightOf="@+id/community" />
 
     <TextView
         android:id="@+id/village"
@@ -64,8 +62,7 @@
         android:layout_marginTop="5dp"
         android:layout_height="50dp"
         android:layout_below="@+id/spiCommunity"
-        android:layout_toRightOf="@+id/street"
-        android:entries="@array/street"/>
+        android:layout_toRightOf="@+id/street" />
 
     <TextView
         android:id="@+id/name"

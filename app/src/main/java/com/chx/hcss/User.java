@@ -26,7 +26,7 @@ public class User extends AppCompatActivity {
     private RecyclerView mListRecyclerView;
     private LinearLayoutManager mLayoutManager;
     private AdapterHelper mRecyclerAdapter;
-    Spinner mSpinnerStreet, mSpinneCommunity, mSpinneVillage;
+    Spinner mSpinnerStreet, mSpinnerCommunity, mSpinnerVillage;
     TextView mTVName;
 
     @Override
@@ -38,15 +38,9 @@ public class User extends AppCompatActivity {
     }
     public void queryClick(View view) {
         clearScrollListener();
-        if (mSpinnerStreet == null) {
-            mSpinnerStreet = (Spinner)findViewById(R.id.spiStreet);
-            mSpinneCommunity = (Spinner)findViewById(R.id.spiCommunity);
-            mSpinneVillage = (Spinner)findViewById(R.id.spiVillage);
-        }
-
         String street = mSpinnerStreet.getSelectedItem().toString();
-        String community = mSpinneCommunity.getSelectedItem().toString();
-        String village = mSpinneVillage.getSelectedItem().toString();
+        String community = mSpinnerCommunity.getSelectedItem().toString();
+        String village = mSpinnerVillage.getSelectedItem().toString();
         String name = mTVName.getText().toString();
         //查询按钮按下
         mRecyclerAdapter.setData(queryData(0));
@@ -55,8 +49,8 @@ public class User extends AppCompatActivity {
     public void spinnerClick(View view) {
         if (mSpinnerStreet == null) {
             mSpinnerStreet = (Spinner)findViewById(R.id.spiStreet);
-            mSpinneCommunity = (Spinner)findViewById(R.id.spiCommunity);
-            mSpinneVillage = (Spinner)findViewById(R.id.spiVillage);
+            mSpinnerCommunity = (Spinner)findViewById(R.id.spiCommunity);
+            mSpinnerVillage = (Spinner)findViewById(R.id.spiVillage);
         }
         int viewId = view.getId();
 
@@ -92,6 +86,24 @@ public class User extends AppCompatActivity {
                 int viewType = holder.getItemViewType();
                 switch (viewType) {
                     case QUERY_VIEW:
+                        if (mSpinnerStreet == null) {
+                            String[] streets = {"街道1", "街道2", "街道3", "街道4"};
+                            ArrayAdapter streetAdapter = new ArrayAdapter(mContext, R.layout.support_simple_spinner_dropdown_item, streets);
+                            mSpinnerStreet = holder.getView(R.id.spiStreet);
+                            mSpinnerStreet.setAdapter(streetAdapter);
+
+                            String[] communities = {"社区1", "社区2", "社区3", "社区4"};
+                            ArrayAdapter communitiyAdapter = new ArrayAdapter(mContext, R.layout.support_simple_spinner_dropdown_item, communities);
+                            mSpinnerCommunity  = holder.getView(R.id.spiCommunity);
+                            mSpinnerCommunity.setAdapter(communitiyAdapter);
+
+                            String[] villages = {"小区1", "小区2", "小区3", "小区4"};
+                            ArrayAdapter villageAdapter = new ArrayAdapter(mContext, R.layout.support_simple_spinner_dropdown_item, villages);
+                            mSpinnerVillage = holder.getView(R.id.spiVillage);
+                            mSpinnerVillage.setAdapter(villageAdapter);
+
+                            mTVName = holder.getView(R.id.editName);
+                        }
                         break;
                     case ITEM_VIEW:
                         holder.setTextView(R.id.list_elder, data.getUserName());
