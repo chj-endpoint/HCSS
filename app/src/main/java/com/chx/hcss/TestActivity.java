@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -28,11 +29,10 @@ public class TestActivity extends AppCompatActivity {
         initData();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.id_recyclerview);
-//设置布局管理器
+        //设置布局管理器
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-//设置adapter
+        //设置adapter
         mRecyclerView.setAdapter(mAdapter = new HomeAdapter());
-
     }
 
     protected void initData() {
@@ -69,7 +69,7 @@ public class TestActivity extends AppCompatActivity {
 
             public MyViewHolder(View view) {
                 super(view);
-                tv = (TextView) view.findViewById(R.id.list_elder);
+                tv = (TextView) view.findViewById(R.id.item_name);
             }
         }
     }

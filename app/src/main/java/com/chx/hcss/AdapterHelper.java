@@ -27,6 +27,7 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     private static final int REFUSH_VIEW = 2;
     private static final int LOADMORE_VIEW = 3;
     private static final int ITEM_VIEW = 4;
+    private OnItemClickListener mOnItemClickListener;
 
 
     public AdapterHelper(Context context, int layoutId) {
@@ -65,12 +66,36 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(RViewHolder holder, int position) {
+    public void onBindViewHolder(RViewHolder holder, final int position) {
         // 绑定数据
         bindView(holder, mData.get(position));
+        if( mOnItemClickListener!= null && position > 0){
+            holder.itemView.setOnClickListener( new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mOnItemClickListener.onItemClick(position);
+                }
+            });
+            holder.itemView.setOnLongClickListener( new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    mOnItemClickListener.onItemLongClick(position);
+                    return false;
+                }
+            });
+        }
     }
 
     public abstract void bindView(RViewHolder holder, T data);
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+        void onItemLongClick(int position);
+    }
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener ){
+        mOnItemClickListener = onItemClickListener;
+    }
+
 
     @Override
     public int getItemCount() {
@@ -85,6 +110,10 @@ public abstract class AdapterHelper<T> extends RecyclerView.Adapter<RViewHolder>
     public void addData(ArrayList<T> data){
         mData.addAll(data);
         notifyDataSetChanged();
+    }
+
+    public T getData(int position){
+        return mData.get(position);
     }
 }
 
