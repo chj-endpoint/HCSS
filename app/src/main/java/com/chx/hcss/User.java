@@ -74,6 +74,9 @@ public class User extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 ElderInfo clickData = (ElderInfo)mRecyclerAdapter.getData(position);
+                Intent intentEdit = new Intent(User.this, EditActivity.class);
+                intentEdit.putExtra("id", clickData.getId());
+                startActivity(intentEdit);
             }
             @Override
             public void onItemLongClick(int position) {
@@ -149,7 +152,8 @@ public class User extends AppCompatActivity {
         }
         for (int i = 0; i < 20; i++) {
             ElderInfo item = new ElderInfo();
-            item.setName("李连杰" + i);
+            item.setId(20 * pageIndex + i);
+            item.setName("李连杰" + (20 * pageIndex + i));
             item.setGender("男");
             item.setAge(50);
             item.setAddress("厦门大学白城社区23#501");

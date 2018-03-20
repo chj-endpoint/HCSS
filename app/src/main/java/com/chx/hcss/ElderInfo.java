@@ -5,6 +5,7 @@ package com.chx.hcss;
  */
 
 public class ElderInfo {
+    private long id;                //姓名
     private String name;                //姓名
     private int age;                   //年龄
     private String gender;             //性别
@@ -49,5 +50,13 @@ public class ElderInfo {
 
     public void setExtInfo(String extInfo) {
         this.extInfo = extInfo;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
