@@ -1862,6 +1862,1118 @@
                     android:layout_height="wrap_content" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pre_silly_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="痴呆前兆（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_xingweiyichang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="行为异常" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_panduankunnan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="思维和判断困难" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_nenglijiantui"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日常生活能力减退" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_jiyizhangai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="记忆障碍" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_daizuo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="呆坐" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_waichu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经常无目的外出" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_lost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="迷路" />
+
+                <CheckBox
+                    android:id="@+id/pre_silly_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_pre_silly_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/family_history_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="现存症状（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/family_history_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无" />
+
+                <CheckBox
+                    android:id="@+id/family_history_gaoxueya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高血压" />
+
+                <CheckBox
+                    android:id="@+id/family_history_tangniaobing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="糖尿病" />
+
+                <CheckBox
+                    android:id="@+id/family_history_guanxinbing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="冠心病" />
+
+                <CheckBox
+                    android:id="@+id/family_history_manxingzuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢性堵塞" />
+
+                <CheckBox
+                    android:id="@+id/family_history_xinfeijibing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心肺疾病" />
+
+                <CheckBox
+                    android:id="@+id/family_history_exingzhongliu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恶性肿瘤" />
+
+                <CheckBox
+                    android:id="@+id/family_history_naozuzhong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脑卒中" />
+
+                <CheckBox
+                    android:id="@+id/family_history_jingshenbing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重性精神疾病" />
+
+                <CheckBox
+                    android:id="@+id/family_history_jiehebing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结核病" />
+
+                <CheckBox
+                    android:id="@+id/family_history_ganyan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肝炎" />
+
+                <CheckBox
+                    android:id="@+id/family_history_jixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="先天畸形" />
+
+                <CheckBox
+                    android:id="@+id/family_history_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_family_history_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dinck_wine_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="饮酒情况"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_dinck_wine_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_dinck_wine_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_dinck_wine_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="偶尔"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_dinck_wine_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经常"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/eating_history_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="饮食习惯"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_eating_history_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_eating_history_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="荤素均衡"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_eating_history_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="荤多"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_eating_history_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="素多"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/smoking_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="抽烟情况"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_smoking_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无吸烟"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2支"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5支"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10支"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1包"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2包"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_seven"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2包以上"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_smoking_eight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其他"/>
+
+                    <EditText
+                        android:id="@+id/txt_smoking_other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/physical_condition_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="身体状况（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_zili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="自理" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_banzili"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="半自理" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_banshineng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="半失能" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_shineng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="失能" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_bantan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="半瘫" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_tanhuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="瘫痪" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_jingshencanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="精神残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_zhiticanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肢体残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_zhilicanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="智力残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_shilicanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视力残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_tinglicanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="听力残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_yuyancanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="语言残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_duochongcanji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="多重残疾" />
+
+                <CheckBox
+                    android:id="@+id/physical_condition_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/health_self_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="健康状况自评"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_health_self_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_health_self_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="满意"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_health_self_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="基本满意"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_health_self_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="说不清楚"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_health_self_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不太满意"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_health_self_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不满意"
+                        android:checked="true"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/care_self_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="自理能力自评"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_care_self_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_care_self_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可自理"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_care_self_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="轻度依赖"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_care_self_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中度依赖"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_care_self_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="不能自理"/>
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/chronic_disease_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="慢性病（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_gaoxueya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高血压" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_tangniaobing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="糖尿病" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_guanxinbing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="冠心病" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_xinjigengse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心肌梗塞" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_xinjibing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心肌病" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_zhongfeng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中风" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_guzhishusong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="骨质疏松" />
+                <CheckBox
+                    android:id="@+id/chronic_disease_xinlishuaijie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢性心力衰竭" />
+
+                <CheckBox
+                    android:id="@+id/chronic_disease_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_chronic_disease_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/exercise_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="体育锻炼（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/exercise_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无" />
+
+                <CheckBox
+                    android:id="@+id/exercise_jujiaduanlian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居家锻炼" />
+
+                <CheckBox
+                    android:id="@+id/exercise_sanbu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="散步" />
+
+                <CheckBox
+                    android:id="@+id/exercise_taijiquan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="太极拳" />
+
+                <CheckBox
+                    android:id="@+id/exercise_menqiu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="门球" />
+
+                <CheckBox
+                    android:id="@+id/exercise_manpao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="慢跑" />
+
+                <CheckBox
+                    android:id="@+id/exercise_youyong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="游泳" />
+
+                <CheckBox
+                    android:id="@+id/exercise_jianshen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="健身" />
+
+                <CheckBox
+                    android:id="@+id/exercise_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_exercise_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/online_type_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="上网方式（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/online_type__no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无" />
+
+                <CheckBox
+                    android:id="@+id/online_type_diannao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电脑" />
+
+                <CheckBox
+                    android:id="@+id/online_type_shouji"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机" />
+
+                <CheckBox
+                    android:id="@+id/online_type_pingban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平板" />
+
+                <CheckBox
+                    android:id="@+id/online_type_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_online_type_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/online_goal_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="上网目的（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_youxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="游戏" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_shipin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="视频" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_liaotian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="聊天" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_yule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="娱乐" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_ruanjian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="软件" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_xiazai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下载" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_xiangguanzixun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="相关资讯" />
+
+                <CheckBox
+                    android:id="@+id/online_goal_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_online_goal_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/housekeeping_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="家政需求（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_dasaoweisheng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="打扫卫生" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_banjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搬家" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_baomu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保姆" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_qingxijiaju"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="清洗家具" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_shutongxiashuidao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="疏通下水道" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_wuxuqiu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无需求" />
+
+                <CheckBox
+                    android:id="@+id/housekeeping_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_housekeeping_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/life_request_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="生活需求（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/life_request_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无需求" />
+
+                <CheckBox
+                    android:id="@+id/life_request_yaopinpeisong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="药品配送" />
+
+                <CheckBox
+                    android:id="@+id/life_request_ruyongpinpeisong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="日用品配送" />
+
+                <CheckBox
+                    android:id="@+id/life_request_niuyangnai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="牛羊奶" />
+
+                <CheckBox
+                    android:id="@+id/life_request_dangao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蛋糕" />
+
+                <CheckBox
+                    android:id="@+id/life_request_lifa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="理发" />
+
+                <CheckBox
+                    android:id="@+id/life_request_canyinpeisong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="餐饮配送" />
+
+                <CheckBox
+                    android:id="@+id/life_request_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_life_request_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/medicine_request_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="医疗需求（至少选一项）"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_peizhen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陪诊" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_tijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="体检" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_shangmenkangfu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上门康复" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_shangmenhuli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上门护理" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_shangmenliliao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上门理疗" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_wuxuqiu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="无需求" />
+
+                <CheckBox
+                    android:id="@+id/medicine_request_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <EditText
+                    android:id="@+id/txt_medicine_request_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/phone_call_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="是否接受电话拜访"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_phone_call_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_phone_call_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是"
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radiophone_call_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="否"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/other_message_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="探访中其他信息记录"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txt_other_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/summary_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="分析总结"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txt_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/query"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/name"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/holo_orange_dark"
+                    android:text="提交"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
