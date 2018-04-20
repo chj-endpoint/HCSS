@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.chx.hcss.EditActivity">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.chx.hcss.ElderInfo"></import>
+        <variable
+            name="elder"
+            type="ElderInfo"></variable>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.chx.hcss.EditActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -50,25 +57,29 @@
                     android:id="@+id/helpage_member2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="蔡婕婷" />
+                    android:text="蔡婕婷"
+                    android:checked="@={elder.male}"/>
 
                 <CheckBox
                     android:id="@+id/helpage_member3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="陈恬" />
+                    android:text="陈恬"
+                    android:checked="@={elder.female}"/>
 
                 <CheckBox
                     android:id="@+id/helpage_member4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="陈益珍" />
+                    android:text="陈益珍"
+                    android:checked="@={elder.checkedMli}"/>
 
                 <CheckBox
                     android:id="@+id/helpage_member5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="许淑敏" />
+                    android:text="许淑敏"
+                    android:checked="@={elder.checkedMli}"/>
             </LinearLayout>
 
             <LinearLayout
@@ -89,7 +100,8 @@
                 <EditText
                     android:id="@+id/local_address"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="@={elder.address}"/>
             </LinearLayout>
 
             <LinearLayout
@@ -177,13 +189,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="男"
-                        android:checked="true"/>
+                        android:checked="@={elder.male}"/>
 
                     <RadioButton
                         android:id="@+id/radioFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="女"/>
+                        android:text="女"
+                        android:checked="@={elder.female}"/>
                 </RadioGroup>
             </LinearLayout>
 
@@ -2979,3 +2992,4 @@
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
+</layout>
