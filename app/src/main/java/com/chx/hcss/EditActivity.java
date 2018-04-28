@@ -24,9 +24,8 @@ public class EditActivity extends AppCompatActivity {
 
         elder = new ElderInfo();
         elder.setId(110);
-        elder.setAddress("XiaMen University");
+        elder.setLocal_address("XiaMen University");
         elder.setName("俞飞鸿");
-        elder.setSmok(true);
         editBinding.setElder(elder);
 
 
@@ -36,6 +35,6 @@ public class EditActivity extends AppCompatActivity {
 
     //查询按钮点击事件
     public void queryClick(View view) {
-        String address = elder.getAddress();
+        String address = elder.getLocal_address();
     }
 }

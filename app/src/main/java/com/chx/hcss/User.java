@@ -154,9 +154,9 @@ public class User extends AppCompatActivity {
             ElderInfo item = new ElderInfo();
             item.setId(20 * pageIndex + i);
             item.setName("李连杰" + (20 * pageIndex + i));
-            item.setGender("男");
-            item.setAge(50);
-            item.setAddress("厦门大学白城社区23#501");
+            item.setRadioMale(true);
+            item.setBirthday("1955年6月");
+            item.setLocal_address("厦门大学白城社区23#501");
             itemList.add(item);
         }
         return itemList;
@@ -164,9 +164,9 @@ public class User extends AppCompatActivity {
 
     private void bindItemView(RViewHolder holder, ElderInfo data){
         holder.setTextView(R.id.item_name, data.getName());
-        holder.setTextView(R.id.item_gender, data.getGender());
-        holder.setTextView(R.id.item_age, data.getAge() > 0 ? (data.getAge() + "岁") : "未知");
-        holder.setTextView(R.id.item_address, data.getAddress());
+        holder.setTextView(R.id.item_gender, data.getRadioMale() ? "男" : "女");
+        holder.setTextView(R.id.item_age, "出生年月：" + (data.getBirthday().length() > 0 ? data.getBirthday() : "未知"));
+        holder.setTextView(R.id.item_address, data.getLocal_address());
     }
 
 }
