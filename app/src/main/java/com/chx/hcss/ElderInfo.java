@@ -19,6 +19,9 @@ public class ElderInfo extends BaseObservable {
     private boolean isMale;           //是否抽烟
     private boolean isFemale;           //是否抽烟
 
+    private String culture_degree;
+
+
     @Bindable
     public int getAge() {
         return age;
@@ -78,6 +81,7 @@ public class ElderInfo extends BaseObservable {
         this.id = id;
         notifyPropertyChanged(BR.id);
     }
+
     @Bindable
     public boolean isMale() {
         return isMale;
@@ -116,5 +120,13 @@ public class ElderInfo extends BaseObservable {
     public void setSmok(Boolean smok) {
         isSmok = smok;
         notifyPropertyChanged(BR.smok);
+    }
+
+    public String getCulture_degree() {
+        return culture_degree;
+    }
+
+    public void setCulture_degree(String culture_degree) {
+        this.culture_degree = culture_degree;
     }
 }
