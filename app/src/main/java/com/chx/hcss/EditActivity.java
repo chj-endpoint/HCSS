@@ -22,6 +22,8 @@ public class EditActivity extends AppCompatActivity {
         Intent intentEdit = getIntent();
         long id = intentEdit.getLongExtra("id", 0);
 
+
+
         elder = new ElderInfo();
         elder.setId(110);
         elder.setLocal_address("XiaMen University");

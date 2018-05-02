@@ -123,7 +123,7 @@ public class Login extends Activity {                 //登录界面活动
                 }
                 editor.commit();
 
-                Intent intent = new Intent(Login.this,User.class) ;    //切换Login Activity至User Activity
+                Intent intent = new Intent(Login.this,QueryActivity.class) ;    //切换Login Activity至User Activity
                 startActivity(intent);
                 finish();
                 Toast.makeText(this, getString(R.string.login_success),Toast.LENGTH_SHORT).show();//登录成功提示
