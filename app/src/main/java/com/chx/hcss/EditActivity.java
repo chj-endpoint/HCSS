@@ -8,11 +8,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.chx.hcss.databinding.ActivityEditBinding;
+import com.google.gson.Gson;
 
 public class EditActivity extends AppCompatActivity {
 
     private ActivityEditBinding editBinding;
-    private ElderInfo elder;
+    private ElderInfo elderInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,16 +21,20 @@ public class EditActivity extends AppCompatActivity {
         editBinding = DataBindingUtil.setContentView(this, R.layout.activity_edit);
 
         Intent intentEdit = getIntent();
-        long id = intentEdit.getLongExtra("id", 0);
+        final long id = intentEdit.getLongExtra("id", 0);
 
-
-
-        elder = new ElderInfo();
-        elder.setId(110);
-        elder.setLocal_address("XiaMen University");
-        elder.setName("俞飞鸿");
-        editBinding.setElder(elder);
-
+        new Thread(new Runnable(){
+            @Override
+            public void run() {
+                DataManager dataManager = new DataManager();
+                Elder elder = new Elder();
+                elder = dataManager.QueryElderById(id);
+                elderInfo = new ElderInfo();
+                Gson gson = new Gson();
+                elderInfo = gson.fromJson(elder.getExtInfo(), ElderInfo.class);
+                editBinding.setElder(elderInfo);
+            }
+        }).start();
 
 //        TextView tv = findViewById(R.id.title);
 //        tv.setText(Long.toString(id));
@@ -37,6 +42,6 @@ public class EditActivity extends AppCompatActivity {
 
     //查询按钮点击事件
     public void queryClick(View view) {
-        String address = elder.getLocal_address();
+        String address = elderInfo.getLocal_address();
     }
 }

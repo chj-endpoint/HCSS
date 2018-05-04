@@ -2,6 +2,8 @@ package com.chx.hcss;
 
 import android.util.JsonReader;
 
+import com.google.gson.Gson;
+
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -17,9 +19,10 @@ public class DataManager {
         Elder elder = new Elder();
         HashMap<String, String> paras = new HashMap<>();
         paras.put("id", String.valueOf(id));
-        String url = HCSS_URL + "elderinfo/GetById";
+        String url = HCSS_URL + "Elderinfo/GetById";
         String response = HttpHelper.httpGet(url, paras);
-//        Gson gson = new Gson();
+        Gson gson = new Gson();
+        elder = gson.fromJson(response, Elder.class);
         return elder;
     }
 }

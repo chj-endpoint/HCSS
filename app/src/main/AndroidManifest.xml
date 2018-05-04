@@ -35,5 +35,5 @@
         <activity android:name=".QueryActivity"></activity>
         <activity android:name=".EditActivity"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
