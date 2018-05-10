@@ -7,6 +7,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
@@ -76,6 +77,30 @@ public class HttpHelper {
             // 将请求体内容加入请求中
             HttpEntity requestHttpEntity = new UrlEncodedFormEntity(pairList, "UTF-8");
             httpPost.setEntity(requestHttpEntity);
+            // 执行get请求.
+            HttpResponse httpResponse = httpClient.execute(httpPost);
+            // 获取响应实体
+            response = getHttpResponse(httpResponse);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    public static String httpPostJson(String url, String jsonEntity){
+        String response = "";
+        try {
+            // 生成请求对象
+            HttpClient httpClient = new DefaultHttpClient();
+            HttpPost httpPost = new HttpPost(url);
+            // 将请求体内容加入请求中
+            StringEntity entity = new StringEntity(jsonEntity,"UTF-8");//解决中文乱码问题
+            entity.setContentEncoding("UTF-8");
+            entity.setContentType("application/json");
+            httpPost.setEntity(entity);
             // 执行get请求.
             HttpResponse httpResponse = httpClient.execute(httpPost);
             // 获取响应实体

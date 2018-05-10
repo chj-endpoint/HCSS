@@ -3262,6 +3262,7 @@
                         android:layout_below="@+id/name"
                         android:layout_marginTop="10dp"
                         android:background="@android:color/holo_orange_dark"
+                        android:onClick="submitClick"
                         android:text="提交"
                         android:textColor="#ffffff"
                         android:textSize="20dp" />
